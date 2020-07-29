@@ -10,7 +10,7 @@
 
 
 
-var respostas = {"1":2,"2":2,"3":1,"4":1};
+
 
 </script>
 
@@ -27,8 +27,9 @@ function aleatorio()
 var quant = document.getElementById("quants").value;
 var i = 0;
 var result = "";
-var valores = [-1];
+var valores = [];
 
+var loop1 = true;
 
 var valid = false;
 
@@ -37,8 +38,9 @@ while(i < quant)
 	var k = 0;	
 	x = Math.floor(Math.random() * quant); 
 	
-	while(k < valores.length)
+	while(k < valores.length || loop1)
 	{
+		loop1 = false;
 		if(valores[k] == x)
 		{
 			valid = true;
@@ -91,14 +93,37 @@ document.getElementById("01").innerHTML = result;
 
 function validar() {
 	
+	
+	var respostas = {"1":1,"2":1,"3":1,"4":1};
+	var ur = false;
+	
+	//Consultar questoes a partir do nome e conferir no array se estao corretas
+	//Dependendo se estao corretas ou nao sera preenchido uma mensagem no inicio de cada uma
 	var quant = document.getElementById("quants").value;
 	var i = 0;
 	
 	while(i < quant)
 	{
 		
+		var q = document.getElementsByName(i);
 		
+		for(var k = 0; k < q.length; k++)
+		{
+			if(q[k].checked == true)
+			{
+				if(q[k].value == respostas[i])
+				{
+					alert("Correta");
+					break;
+				}
+				else {
+					alert("Errada");
+					break;
+				}
+			}
+		}
 		
+
 		
 		i++;
 	}	
