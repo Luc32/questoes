@@ -1,10 +1,11 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<title>Questões</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script>
 
@@ -36,9 +37,11 @@ var valid = false;
 while(i < quant)
 {
 	var k = 0;	
+	//0 .. max
+	//O numero aleatorio gerado é a questão escolhida
 	x = Math.floor(Math.random() * quant); 
 	
-	while(k < valores.length || loop1)
+	while(k < valores.length)
 	{
 		loop1 = false;
 		if(valores[k] == x)
@@ -55,7 +58,7 @@ while(i < quant)
 	if(valid == false)
 	{
 		valores.push(x);
-		result += "<img src = \"" + x.toString() + "\\img.png\"/><br><br>" +
+		result += "<div class=\"col-sm-4\"> <img width = \"98%\" src = \"" + x.toString() + "\\img.png\"/><br><br>" +
 		
 		"<div id = \"quest" + x.toString() +"\">" +
 				
@@ -74,7 +77,7 @@ while(i < quant)
 		"<div>" +
   			"<input type=\"radio\" id=\"3\" name=\"" + x.toString() +"\" value=\"3\">" +
   			"<label for=\"3\">3</label>" +
-		"</div>";
+		"</div></div>";
 		i++;
 	}
 	else {
@@ -94,40 +97,50 @@ document.getElementById("01").innerHTML = result;
 function validar() {
 	
 	
-	var respostas = {"1":1,"2":1,"3":1,"4":1};
-	var ur = false;
+	var respostas = {"0":1,"1":1,"2":2,"3":1,"4":3,"5":3};
+	var resp = false;
+	var acertos = 0;
 	
 	//Consultar questoes a partir do nome e conferir no array se estao corretas
 	//Dependendo se estao corretas ou nao sera preenchido uma mensagem no inicio de cada uma
 	var quant = document.getElementById("quants").value;
 	var i = 0;
-	
+	//alert(respostas["1"]);
 	while(i < quant)
 	{
 		
 		var q = document.getElementsByName(i);
 		
-		for(var k = 0; k < q.length; k++)
+		for(var k = 0; k < 3; k++)
 		{
+			
 			if(q[k].checked == true)
 			{
-				if(q[k].value == respostas[i])
+				
+				if(q[k].value == respostas[i.toString()])
 				{
-					alert("Correta");
-					break;
-				}
-				else {
-					alert("Errada");
+					//alert("Correta: " + q[k].value);
+					resp = true;
+					acertos++;
 					break;
 				}
 			}
 		}
 		
-
+		if(resp == false)
+		{
+			//alert("Errada: ");
+		}
+		else
+		{
+			resp = false;
+		}
 		
 		i++;
 	}	
 	
+	
+	alert("Voce acertou: " + acertos + "\n" + "Isso é " + (acertos/quant) * 100 + "% de acertos!");
 	
 }
 
@@ -137,7 +150,10 @@ function validar() {
 </head>
 
 <body>
-<h1>Quantidade de questoes</h1>
+
+<div class="jumbotron text-center">
+  <h1>Perguntas</h1>
+</div>
 
 
 <form>
@@ -148,14 +164,24 @@ function validar() {
 
 <form>
 
-<div id = "01">
+<div class="container">
+  <div class="row" id = "01">
+    
 
 
+
+
+
+
+
+</div>
 </div>
 
 <input type = "button" onclick = "validar()" value = "Validar">
 
 </form>
+
+
 </body>
 
 </html>
