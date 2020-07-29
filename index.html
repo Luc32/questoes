@@ -7,12 +7,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-  
+  <style>
+.slidecontainer {
+  width: 25%;
+}
+
+</style>
   
 
 <script>
 
+
+
 var valores = [];
+
 
 //Escolher questoes aleatorias
 function aleatorio()
@@ -154,6 +162,11 @@ function validar() {
 }
 
 
+function alterar(x)
+{
+	document.getElementById("qq").innerHTML = "Quantidade de questões:" + x;
+}
+
 </script>
 
 </head>
@@ -166,7 +179,10 @@ function validar() {
 
 
 <form>
-<input type = "text" id = "quants" placeholder = "Quantidade de questões...">
+ <p id = "qq">Quantidade de questões: </p>
+<div class="slidecontainer">
+<input type="range" id = "quants" min="1" max="100" value="50" onchange = "alterar(this.value)">
+</div>
 <input type = "button" onclick="aleatorio()" class="btn btn-primary" value = "Gerar">
 
 </form>
