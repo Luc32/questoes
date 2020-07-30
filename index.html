@@ -63,7 +63,7 @@ while(i < quant)
 	if(valid == false)
 	{
 		valores.push(x);
-		result += "<div id = \"divborders\"  class=\"col-sm-8\"> <img width = \"98%\" src = \"" + x.toString() + "\\img.png\"/><br><br>" +
+		result += "<div id = \"divborders\"  class=\"col-sm-8\"> <img width = \"120%\" src = \"" + x.toString() + "\\img.png\"/><br><br>" +
 		
 		"<div id = \"quest" + x.toString() +"\">" +
 				
@@ -169,7 +169,7 @@ function validar() {
 	}	
 	
 	
-	alert("Voce acertou: " + acertos + "\n" + "Isso é " + ((acertos/quant) * 100).toPrecision(4) + "% de acertos!");
+	alert("Voce acertou: " + acertos + " de " + quant +"\n" + "Isso é " + ((acertos/quant) * 100).toPrecision(4) + "% de acertos!");
 	
 	
 	
