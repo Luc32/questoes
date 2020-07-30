@@ -99,9 +99,8 @@ while(i < quant)
 
 
 document.getElementById("01").innerHTML = result;
-document.getElementById("02").innerHTML = "<input id = \"valids\"class=\"btn btn-success\" type = \"button\" onclick = \"validar()\" value = \"Validar\">";
+document.getElementById("ids02").innerHTML = "<input  id = \"valids\"class=\"btn btn-success\" type = \"button\" onclick = \"validar()\" value = \"Validar\">";
 document.getElementById("gerar").disabled = true;
-document.getElementById("valids").disabled = false;
 }
 
 function validar() {
@@ -174,8 +173,8 @@ function validar() {
 	
 	
 	
-	document.getElementById("valids").enabled = "false";
-	document.getElementById("02").innerHTML = "<br><br><input id = \"recarregar\"class=\"btn btn-success\" type = \"button\" onclick = \"recarregarpagina()\" value = \"Recarregar\">";
+	document.getElementById("valids").disabled = true;
+	document.getElementById("ids02").innerHTML = "<input id = \"recarregar\"class=\"btn btn-success\" type = \"button\" onclick = \"recarregarpagina()\" value = \"Recarregar\">"
 	
 }
 
@@ -187,7 +186,7 @@ function alterar(x)
 
 function recarregarpagina()
 {
-	location.reload();
+	window.location.reload();
 }
 
 </script>
@@ -225,7 +224,12 @@ function recarregarpagina()
 </div>
 </div>
 
-<div id = "02">
+<div id = "ids02">
+
+
+
+
+
 </div>
 </form>
 
