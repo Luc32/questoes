@@ -237,7 +237,7 @@ while(i < quant)
 	var k = 0;	
 	//0 .. max
 	//O numero aleatorio gerado é a questão escolhida
-	x = Math.floor(Math.random() * 10); 
+	x = Math.floor(Math.random() * 20); 
 	
     //Primeiro loop não entra antes de inserir o elemento
     //Ao entra no loop ele garante que o item não será inserido mais de uma vez
@@ -266,17 +266,17 @@ while(i < quant)
 				
 		"</div>" +
 		"<div class = \"infoq\">" +
-	  "<input   type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + x.toString() +"\" value=\"" + eval("myObj.questao.a".replace("questao","q" + x.toString())) + "\">" +
+	  "<input   type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + "q" + x.toString() +"\" value=\"a\">" +
   			"<label for=\"1\">" + eval("myObj.questao.a".replace("questao","q" + x.toString()))+ "</label>" +
 		"</div>" +
 
 		"<div class = \"infoq\">" +
-        "<input  type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + x.toString() +"\" value=\"" + eval("myObj.questao.b".replace("questao","q" + x.toString())) + "\">" +
+        "<input  type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + "q" + x.toString()  +"\" value=\"b\">" +
         "<label for=\"1\">" + eval("myObj.questao.b".replace("questao","q" + x.toString())) + "</label>" +
 		"</div>" +
 
 		"<div class = \"infoq\">" +
-        "<input  type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + x.toString() +"\" value=\"" + eval("myObj.questao.c".replace("questao","q" + x.toString())) + "\">" +
+        "<input  type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + "q" + x.toString()  +"\" value=\"c\">" +
         "<label for=\"1\">" + eval("myObj.questao.c".replace("questao","q" + x.toString()))+ "</label>" +
 		"</div></div>";
 		i++;
@@ -314,36 +314,38 @@ function validar() {
 	//Consultar questoes a partir do nome e conferir no array se estao corretas
 	//Dependendo se estao corretas ou nao sera preenchido uma mensagem no inicio de cada uma
 	var quant = document.getElementById("quants").value;
+    //alert(quant);
 	var i = 0;
 	
-	
-	
-	while(i < quant)
+
+    //Loop pelos valores das questões gerados aleatoriamente
+	while(i < valores.length)
 	{
-		
-		var q = document.getElementsByName(valores[i]);
-		
-		
-		//Respostas 1 a 3
+
+        //get numero questão
+		var q = document.getElementsByName('q' + valores[i]);
+
+		//Respostas a,b,c,d,e
 		for(var k = 0; k < 3; k++)
 		{
 			//Consulta resposta marcada
 			if(q[k].checked == true)
 			{
-                //eval("myObj.questao.c".replace("questao","q" + i))
-                //if(q[k].value == respostas[valores[i].toString()])
-				//Compara valor da resposta marcada com a resposta correta
-                alert(eval("myObj.questao.resposta".replace("questao","q" + i)))
-				if(q[k].value == eval("myObj.questao.resposta".replace("questao","q" + i)))
-				{
-				
-					resp = true;
-					acertos++;
-					document.getElementById("quest" + valores[i]).innerHTML = "<div class=\"alert alert-success\">" + 
-					"<strong>Correta!</strong>" +
-					"</div>";
-					break;
-				}
+
+                if(q[k].name == "q" + valores[i])
+                {
+                    if(q[k].value == eval("myObj.questao.resposta".replace("questao","q" + valores[i])) )
+                    {
+                    
+                        resp = true;
+                        acertos++;
+                        document.getElementById("quest" + valores[i]).innerHTML = "<div class=\"alert alert-success\">" + 
+                        "<strong>Correta!</strong>" +
+                        "</div>";
+                        break;
+                    }
+                }
+
 			}
 		}
 		
