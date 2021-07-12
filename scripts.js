@@ -9,206 +9,26 @@ const quests = JSON.stringify({
         "a":"0,10% - Zero vírgula dez por cento",
         "b":"0,08% - Zero vírgula zero oito por cento",
         "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
+        "img":"./imagens/placa1.jpg",
         "resposta":"a"
     },
     "q1":
     {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
+        "pergunta":"Dos sinais seguintes qual indica a aproximação de trabalhos na estrada?:",
+        "a":"a",
+        "b":"b",
+        "c":"c",
+        "img":"./imagens/questao1.jpg",
         "resposta":"a"
 
     },
     "q2":
     {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q3":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q4":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q5":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q6":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q7":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q8":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q9":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q10":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q11":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q12":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q13":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q14":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q15":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q16":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q17":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q18":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q19":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
-        "resposta":"a"
-
-    },
-    "q20":
-    {        
-        "pergunta":"É ilegal uma pessoa com mais de 21 anos conduzir com um teor de álcool no sangue (TAS) igual ou superior a:",
-        "a":"0,10% - Zero vírgula dez por cento",
-        "b":"0,08% - Zero vírgula zero oito por cento",
-        "c":"0,05% - Zero vígula zero cingo por cento",
-        "d":"",
+        "pergunta":"Na califórnia, quem conduzir um veículo motorizado dá o consentimento para fazer um teste químico para o conteúdo de álcool no sangue, que pode ser de sopro ou de urina:",
+        "a":"Se for obrigado por lei",
+        "b":"Apenas se tiver ingerido álcool",
+        "c":"Apenas se ocorrer um acidente",
+        "img":"",
         "resposta":"a"
 
     }
@@ -237,7 +57,7 @@ while(i < quant)
 	var k = 0;	
 	//0 .. max
 	//O numero aleatorio gerado é a questão escolhida
-	x = Math.floor(Math.random() * 20); 
+	x = Math.floor(Math.random() * 3); 
 	
     //Primeiro loop não entra antes de inserir o elemento
     //Ao entra no loop ele garante que o item não será inserido mais de uma vez
@@ -264,8 +84,13 @@ while(i < quant)
 		"<div id = \"quest" + x.toString() +"\">" +
 				
 				
-		"</div>" +
-		"<div class = \"infoq\">" +
+		"</div>";
+        if(eval("myObj.questao.img".replace("questao","q" + x.toString())).includes("./imagens/"))
+        {
+            result += "<img src = '" + eval("myObj.questao.img".replace("questao","q" + x.toString())) + "'/>";
+        }
+
+		result += "<div class = \"infoq\">" +
 	  "<input   type=\"radio\" id=\"" +  x.toString() +"1\" name=\"" + "q" + x.toString() +"\" value=\"a\">" +
   			"<label for=\"1\">" + eval("myObj.questao.a".replace("questao","q" + x.toString()))+ "</label>" +
 		"</div>" +
